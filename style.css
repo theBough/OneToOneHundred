@@ -1,0 +1,21 @@
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  background-color: black;
+  padding: 1px;
+  width: 620px;  
+}
+.grid-item{
+  background-color: white;
+  border: 1px solid grey;
+  text-align: center;
+}
+button{
+  height: 60px;
+  width: 60px;
+  background-color: yellow;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  display: inline-block;
+}

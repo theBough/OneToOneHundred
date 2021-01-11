@@ -1,0 +1,11 @@
+function makeButtons(){
+  for( var i = 0 ; i<100 ; i++){
+    var btn = document.createElement("button");
+    btn.setAttribute("type","button");
+    btn.setAttribute("class","btnClass");
+    btn.setAttribute("id",i);
+    document.getElementById("theGrid").appendChild(btn);
+    document.getElementById(i).innerHTML = i;
+
+  }//end for loop
+}//end function makeButtons

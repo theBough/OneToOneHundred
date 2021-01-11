@@ -1,0 +1,17 @@
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  background-color: black;
+  padding: 1px;
+  width: 620px;
+}
+button{
+  height: 60px;
+  width: 60px;
+  background-color: pink;
+  border: 1px solid black;
+  font-size: 18px;
+  color: black;
+  text-align:  center;
+  display: inline-block;
+}

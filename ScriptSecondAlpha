@@ -1,11 +1,29 @@
+var rndList = [];
+var targetNumber = 1;
+
 function makeButtons(){
+  makeRndList();
   for( var i = 0 ; i<100 ; i++){
     var btn = document.createElement("button");
     btn.setAttribute("type","button");
     btn.setAttribute("class","btnClass");
     btn.setAttribute("id",i);
     document.getElementById("theGrid").appendChild(btn);
-    document.getElementById(i).innerHTML = i;
-
+    document.getElementById(i).innerHTML = rndList[i];
+    document.getElementById(i).onclick = thisClicked;
   }//end for loop
 }//end function makeButtons
+function makeRndList(){
+  while(rndList.length < 100){
+    var rnd  = Math.floor( Math.random() *100 ) +1;
+    if(rndList.indexOf(rnd)==  -1 )rndList.push(rnd);
+  }//end while
+}//end makeRndList
+
+var thisClicked = function(){
+  if(document.getElementById(this.id).innerHTML == targetNumber){
+    targetNumber +=1;
+    document.getElementById(this.id).innerHTML = "";
+    document.getElementById("HTMLActiveNumber").innerHTML = "Current number: "+ targetNumber;
+  }//end if
+}//end function ThisClicked

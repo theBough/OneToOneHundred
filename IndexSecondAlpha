@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Boughen</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 id = "title">1 to 100</h1>
+    <h2 id= "instructions">Click the buttons in numerical order. Lowest time wins!</h2>
+    <h3 id = "HTMLActiveNumber"> 1 <h3>
+    <button id= "btnStart" onclick="makeButtons()">Start</button>
+    <div class = "grid-container" id= "theGrid"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

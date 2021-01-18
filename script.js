@@ -1,5 +1,8 @@
 var rndNumbers = [];
 var target  =1;
+var seconds = 0;
+var minutes = 0;
+var clockStop;
 
 function makeButtons(){
   makeARndList();
@@ -12,6 +15,7 @@ function makeButtons(){
     document.getElementById(i).innerHTML = rndNumbers[i];
     document.getElementById(i).onclick = thisClicked;
   }//end for loop
+  clockStop = setInterval(clockTimer,500);
 }//end Function
 var thisClicked = function() {
     if(document.getElementById(this.id).innerHTML == target){
@@ -31,3 +35,11 @@ function makeARndList(){
     console.log(rndNumbers);
 }//end function
 
+function clockTimer(){
+  seconds += 1;
+  if (seconds > 59){
+    minutes += 1;
+    seconds = 0;
+  }
+  document.getElementById("clock").innerHTML = minutes + ":"+seconds;
+}

@@ -41,5 +41,10 @@ function clockTimer(){
     minutes += 1;
     seconds = 0;
   }
-  document.getElementById("clock").innerHTML = minutes + ":"+seconds;
+  if ( seconds < 10){
+    document.getElementById("clock").innerHTML = minutes + ":0"+seconds;
+  }else{
+    document.getElementById("clock").innerHTML = minutes + ":"+seconds;
+  }
+  
 }

@@ -23,6 +23,9 @@ var thisClicked = function() {
         document.getElementById("htmlTarget").innerHTML = "You are on number: " + target;
         document.getElementById(this.id).innerHTML = "";
     }//end if
+    if ( target == 101){
+      clearInterval(clockStop);
+    }
 }//end function
 
 function makeARndList(){
